@@ -6,7 +6,7 @@ This is a sample project to demonstrate spring boot with docker compose, the bel
    3.  sequel pro (can use any mysql GUI)
 
 ### Steps to follow
-    1. clone project from 
+    1. clone project ie git clone https://github.com/Babin4babi/ArtOfCoding.git
     2. open the terminal and run ./init.sh (if you get any permision issues , then run with chmod 777 ./init.sh
     3. once the script finishes the service and mysql containers will be created
     4. you can access the api docs from localhost:8080/dockerized-spring/v2/docs
