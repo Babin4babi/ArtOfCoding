@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+
+  mydb:
+    image: mysql:5.7
+    container_name: "mydb"
+    environment:
+      MYSQL_DATABASE: 'sample'
+      MYSQL_USER: 'user'
+      MYSQL_ROOT_PASSWORD: 'user'
+      MYSQL_PASSWORD: 'user'
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - /tmp/mount/data:/var/lib/mysql
+
+  employee_service:
+    container_name: "employee_service"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - mydb
+    ports:
+      - "8080:8080"
+
+
+
+
